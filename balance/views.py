@@ -6,7 +6,9 @@ from django.utils import timezone
 def home(request):
     if request.method == 'POST':
         username = request.POST.get('username')
+    
         user = UserBalance.objects.filter(username=username).first()
+       
         if user:
             if user.expiry_date and user.expiry_date < timezone.now():
                 messages.error(request, 'Account has expired. Please contact admin.')

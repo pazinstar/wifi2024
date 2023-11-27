@@ -23,3 +23,10 @@ def external_page(request):
     # Replace 'https://www.example.com' with the actual external link you want to display
     external_url = 'https://kdc2.000webhostapp.com/index.php'
     return render(request, 'balance/external_page.html', {'external_url': external_url})
+from django.shortcuts import redirect
+
+from django.shortcuts import redirect
+
+def admin_login_view(request):
+    # Redirect to the admin login page
+    return redirect('admin:login')

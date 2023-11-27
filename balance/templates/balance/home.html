@@ -102,11 +102,11 @@
     </div>
 
     <div class="container">
-        <h2>Enter Your Username</h2>
+        <h2>Enter Your Username or Phone Number:</h2>
        
         <form method="post" action="{% url 'balance:home' %}">
             {% csrf_token %}
-            <label for="username">Username:</label>
+           
             <input type="text" name="username" required>
             {% if messages %}
                 <ul class="messages">

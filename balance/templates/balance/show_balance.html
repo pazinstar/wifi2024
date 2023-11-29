@@ -37,7 +37,7 @@
 
         .container {
             width: 80%;
-            max-width: 300px;
+            max-width: 400px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -164,7 +164,7 @@
 
                 countdownElement.innerHTML = `Time until expiry: ${days}d ${hours}h ${minutes}m ${seconds}s`;
             } else {
-                countdownElement.innerHTML = 'Account expired! The system will disconnect you soon!';
+                countdownElement.innerHTML = 'Account expired! <br> The system will disconnect you soon!';
                 countdownElement.classList.add('expired');
             }
         }

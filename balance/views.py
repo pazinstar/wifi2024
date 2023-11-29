@@ -10,10 +10,7 @@ def home(request):
         user = UserBalance.objects.filter(username=username).first()
        
         if user:
-            if user.expiry_date and user.expiry_date < timezone.now():
-                messages.error(request, 'Account has expired. Please contact admin.')
-            else:
-                return redirect('balance:show_balance', username=username)
+            return redirect('balance:show_balance', username=username)
         else:
             messages.error(request, 'User does not exist. Contact admin.')
     return render(request, 'balance/home.html')

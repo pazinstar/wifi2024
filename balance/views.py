@@ -18,6 +18,10 @@ def home(request):
 def show_balance(request, username):
     user = UserBalance.objects.get(username=username)
     return render(request, 'balance/show_balance.html', {'user': user})
+def Contact_view(request):
+    
+    return render(request, 'balance/contact.html')
+
 def external_page(request):
     # Replace 'https://www.example.com' with the actual external link you want to display
     external_url = 'https://kdc2.000webhostapp.com/index.php'
@@ -29,3 +33,6 @@ from django.shortcuts import redirect
 def admin_login_view(request):
     # Redirect to the admin login page
     return redirect('admin:login')
+
+    
+   

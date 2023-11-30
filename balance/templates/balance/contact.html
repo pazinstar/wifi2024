@@ -100,29 +100,19 @@
 </head>
 <body>
     <div class="navbar">
+        <a href="{% url 'balance:home' %}">Home</a>
         <a href="#">Register</a>
-        <a href="{% url 'balance:Contact' %}">Contact</a>
+        <a href="{% url 'balance:Contact' %}" >Contact</a>
         <a href="#">Chat</a>
         <a href="{% url 'balance:admin_login' %}">Admin Login</a>
     </div>
     <div class="container">
         <img src="https://th.bing.com/th/id/R.022f90931b274a40ffa931bc4d0302fa?rik=hgjt9fsSI%2bGCtg&pid=ImgRaw" alt="Icon">
     
-        <h3>Enter Your Username:</h3>
-       
-        <form method="post" action="{% url 'balance:home' %}">
-            {% csrf_token %}
-           
-            <input type="text" name="username" id="username" oninput="ignoreSpaces()" required>
-            {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                        <li class="error">{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            <input type="submit" value="Login">
-        </form>
+        <h3>Please contact us via the following:</h3>
+        <h5>0705752300</h4>
+            <h5>0757179570</h4>
+        
     </div>
     <script>
         function ignoreSpaces() {

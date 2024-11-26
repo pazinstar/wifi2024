@@ -25,7 +25,7 @@ def Contact_view(request):
 def external_page(request):
     # Replace 'https://www.example.com' with the actual external link you want to display
     external_url = 'https://bluecash.co.ke/new_phone_deposit/'
-    return render(request, 'balance/external_page.html', {'external_url': external_url})
+    return redirect(external_url)
 from django.shortcuts import redirect
 
 from django.shortcuts import redirect
